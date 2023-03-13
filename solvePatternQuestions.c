@@ -93,16 +93,43 @@
 //  * * * *
 // * * * * *
 
-#include<stdio.h>
-void main (){
-  int row=5;
-  for(int i=0; i<row; i++){
-    for(int n=0; n<row-i; n++){
-      printf(" ");
+// #include<stdio.h>
+// void main (){
+//   int row=5;
+//   for(int i=0; i<row; i++){
+//     for(int n=0; n<row-i; n++){
+//       printf(" ");
+//     }
+//     for(int col=0; col<i+1; col++){
+//       printf(" *");
+//     }
+//     printf("\n");
+//   }
+// }
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // ****
+    // ***
+    // **
+    // *
+
+      #include<stdio.h>
+    void main(){
+        int row=5;
+        for(int i=0; i<row; i++){
+            for(int n=0; n<i+1; n++){
+                printf("*");
+            }
+            printf("\n");
+        }
+        for(int i=row; i>=0; i--){
+            for(int n=0; n<i+1; n++){
+                printf("*");
+            }
+            printf("\n");
+        }
     }
-    for(int col=0; col<i+1; col++){
-      printf(" *");
-    }
-    printf("\n");
-  }
-}
