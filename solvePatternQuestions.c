@@ -117,19 +117,74 @@
     // **
     // *
 
-      #include<stdio.h>
-    void main(){
+    //   #include<stdio.h>
+    // void main(){
+    //     int row=5;
+    //     for(int i=0; i<row; i++){
+    //         for(int n=0; n<i+1; n++){
+    //             printf("*");
+    //         }
+    //         printf("\n");
+    //     }
+    //     for(int i=row; i>=0; i--){
+    //         for(int n=0; n<i+1; n++){
+    //             printf("*");
+    //         }
+    //         printf("\n");
+    //     }
+    // }
+
+//             *
+//          *     *
+//        *         *
+//      *             *
+//    *                 *
+//  *                     *
+//    *                 *
+//      *             *
+//        *         *
+//          *     *
+//             *
+
+    
+    #include<stdio.h>
+    void main (){
         int row=5;
-        for(int i=0; i<row; i++){
-            for(int n=0; n<i+1; n++){
-                printf("*");
+        for (int i=0; i<row; i++){
+            if(i==0){
+                printf(" ");
             }
+            for(int n=0; n<row-i; n++){
+                printf("  ");
+            }
+            printf(" *");
+             for(int j=0;j<2*i;j++){
+                printf( "  ");
+            }
+            if(i>0)
+            printf( " *");
+
             printf("\n");
         }
-        for(int i=row; i>=0; i--){
-            for(int n=0; n<i+1; n++){
-                printf("*");
+
+        for (int i=row; i>=0; i--){
+            if(i==0){
+                printf(" ");
+
             }
+            for(int n=0; n<row-i; n++){
+                printf("  ");
+            
+            }
+            
+            printf(" *");
+             for(int j=0;j<2*i;j++){
+                printf("  ");
+            }
+            if(i>0)
+            printf(" *");
+
             printf("\n");
         }
+        
     }
